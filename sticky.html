@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>sticky</title>
+<script src="https://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<style>
+ html,body {
+	width:100%;
+	margin:0;
+	padding:0;
+}
+.container {
+	width:100%;
+	margin:0;
+	padding:0;
+	padding-bottom:800px;
+}
+header {
+	background:lightblue;
+	width:100%;
+	height:80px;
+	position:fixed;
+	top:0;
+	left:0;
+}
+.mark {
+	height:20px;
+	position:fixed;
+	width:80%;
+	top:80px;
+	/*background:#fff;
+	*/
+            /*color:red;
+	*/
+            margin-left:10%;
+	background:lightseagreen;
+}
+.content {
+	width:80%;
+	margin:140px auto 0;
+	background:lightsalmon;
+}
+ul {
+	list-style-type:none;
+	margin:0;
+	padding:0;
+}
+.title {
+	background:lightseagreen;
+	height:20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <div class="mark"></div>
+    <div class="content">
+        <ul>
+            <li>
+                <p class="title">测试1111111</p>
+                <div class="aaa" attr="task01">
+            我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233 
+          </div>
+            </li>
+            <li>
+                <p class="title">测试22222</p>
+                <div class="aaa" attr="task02">
+                    我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233 
+                </div>
+            </li>
+            <li>
+                <p class="title">测试333333</p>
+                <div class="aaa" attr="task03">
+                    我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233 
+                </div>
+            </li>
+            <li>
+                <p class="title">测试44444</p>
+                <div class="aaa" attr="task04">
+                    我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233   我是袁233 
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+ $(window).load(function() {
+     /**
+      * 初始化设置
+      */
+
+     //获取第一个标题元素距离页面顶端的距离
+     var top = $(".title:first").offset().top;
+     //移动页面，使第一个title元素到mark的位置,并将title中的文字给mark
+     window.scrollTo(0, top - 80);
+     $(".mark").html($(".title:first").html());
+
+     /**
+      * 滚动事件
+      */
+     var titles = $(".title");
+     var obj = {};
+     for (var i = 0; i < titles.length; i++) {
+         obj["top" + i] = $(titles[i]).offset().top - 80;
+     }
+     $(window).scroll(function() {
+         //如果页面向上拉伸的距离大于等于哪个title距离顶部的距离，就将哪个title中的文字给mark
+         for (var i = 0; i < titles.length; i++) {
+             if ($(window).scrollTop() >= obj["top" + i] && $(window).scrollTop() <= obj["top" + (i + 1)]) {
+                 $(".mark").html($(".title").eq(i).html());
+                 $(".mark").css("height", "20px");
+             } else if ($(window).scrollTop() >= obj["top" + (titles.length - 1)] &&
+                 $(window).scrollTop() <= obj["top" + (titles.length - 1)] + parseFloat($(".title").eq(titles.length - 1).next('div').height())) {
+                 $(".mark").html($(".title").eq(titles.length - 1).html());
+                 $(".mark").css("height", "20px");
+             } else if ($(window).scrollTop() <= obj.top0) {
+                 $(".mark").html("");
+                 $(".mark").css("height", "0");
+             } else if ($(window).scrollTop() >= obj["top" + (titles.length - 1)] + parseFloat($(".title").eq(titles.length - 1).next('div').height())) {
+                 $(".mark").html("");
+                 $(".mark").css("height", "0");
+             }
+         }
+     });
+
+ });
+</script>
+
+</body>
+</html>
