@@ -1,0 +1,87 @@
+<!--
+    已经知道宽高
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     #box{
+    background-color: #F00;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -50px 0 0 -50px;
+   text-align:center;
+   line-height: 100px;/* 设置和盒子的高度一样，让文本居中 */
+    }
+    </style>
+</head>
+<body>
+    <div id="box">A</div>
+</body>
+</html>
+-->
+
+
+<!--
+    未知宽高
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+     #box{
+    background-color: #F00;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+   transform: translate(-50%,-50%);
+   text-align:center;
+   line-height: 100px;/* 设置和盒子的高度一样，让文本居中 */
+    }
+    </style>
+</head>
+<body>
+    <div id="box">A</div>
+</body>
+</html>
+-->
+
+
+<!--
+    未知宽高
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> 
+    #father {
+        width: 500px;
+        height: 300px;
+        background-color: skyblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+ 
+    #son {
+        background-color: #F00;
+}
+</style>
+</head>
+<body>
+
+<div id="father">
+        <div id="son">我是块级元素</div>
+    </div>
+    </body>
+    </html>
