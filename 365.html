@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style> 
+   .banner {
+      position: relative;
+  border-radius: 5px 0px 0 5px;
+  box-shadow: 0px 4px 30px 0px  rgba(173, 173, 173, 0.3);
+  width: 250px;
+  height: 100px;
+
+  background-color:rgba(234, 169, 84, .2);
+  background-image: -webkit-radial-gradient(
+    100% 0,
+    circle farthest-corner,        
+    #f2f2f2 10px,
+    transparent 10px
+  ),
+    -webkit-radial-gradient(
+    100% 100%,
+    circle farthest-corner,
+    #f2f2f2 10px,
+    transparent 10px
+  );
+ 
+  background-image: radial-gradient(
+    0 100%,
+    circle farthest-corner,
+  #f2f2f2 10px,
+    transparent 10px
+  ),
+    radial-gradient(
+    0 100%,
+  #f2f2f2 10px,
+    transparent 10px
+  );
+}
+main {
+    position: absolute;
+    top: 10px;
+    left:270px;
+  border-radius: 0 5px 5px 0 ;
+  box-shadow: 0px 4px 30px 0px  rgba(173, 173, 173, 0.3);
+  width: 450px;
+  min-height: 100px;
+
+  background-image: radial-gradient(
+    100% 100%,
+    circle farthest-corner,
+    #f2f2f2 10px,
+    transparent 10px
+  ),
+    radial-gradient(
+    100% 0,
+    #f2f2f2 10px,
+    transparent 10px
+  );
+  background-image: -webkit-radial-gradient(
+    0 100%,
+    circle farthest-corner,        
+    #f2f2f2 10px,
+    transparent 10px
+  ),
+    -webkit-radial-gradient(
+    0 0,
+    circle farthest-corner,
+    #f2f2f2 10px,
+    transparent 10px
+  );
+}
+</style>
+</head>
+<body>
+        <div class="container">
+                <div class="banner"></div>
+                <main></main>
+              </div>
+    </body>
+    </html>
